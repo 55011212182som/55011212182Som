@@ -85,7 +85,15 @@ if let oldValue = airports.updateValue("Dublin International", forKey: "DUB"){
 airports["APL"] = "Apple International"
 //"Apple International" is not the real airport for APL, so delete it 
 
-airports[APL] = 
+airports["APL"] = nil
+//
+
+if  let removedValue = airports.removeValueForKey("DUB") {
+    println("The removed airport's name is \(removedValue).")
+} else {
+    println("The airports dictionary dose not contain a value for DUB.")
+}
+//
 
 
 
